@@ -1,0 +1,12 @@
+Definizione di backdoor 
+Le backdoor sono un medoto usato per entrare come amministratore in siti web e computer senza avere un'accesso autorizzato, è anche possibile tenerle aperte e rientrarci quando si vuole. 
+Di solito sono usate per intenti malevoli e la vittima non è consapevole di avere una backdoor installata, il medoto
+più utilizzato per installarle e tramite il protocollo HTTP e viene usata la porta 80, addetta proprio al traffico di internet in uscita.
+
+Commento codice 
+Nella prima riga si poù vedere un import usato per caricare diversi moduli all'interno del codice, 
+nelle righe successive possiamo vedere il modulo socket utilizzato.
+Il comando print serve per dare all'utente un output scritto di quello che succede, in questo caso viene detto quando il client è collegato e a quale indirizzo è collegato.
+Poi possiamo vedere un ciclo di while con al suo interno le funzioni di try e except, nello specifico il try prova un blocco di codice e decide cosa fare se succedono errori grazie alla funzione except, se va tutto bene il codice va avanti con le funzioni di if e elif, che permetto di eseguire diverse azioni in base alla situazione che capita.
+Nella funzione if possiamo vedere il comando "data.decode('utf-8')" che serve a python per converitre i bytes in stringhe di oggetto, continuando nella stessa funzione posiamo vedere il modo in cui python si connette alla macchina interessata, se invece siamo gia collegati salta if e va direttamente all'elif dove va a verificare la connessione con il comando connection.recv.
+Nel secondo try avviene un'altra comversione in bytes in stringhe di oggetto e se questa funzione non va a buon fine entra in funzione l'except che dice Wrong path, nell'ultimo elif possiamo vedere la connessione che si chiude.
